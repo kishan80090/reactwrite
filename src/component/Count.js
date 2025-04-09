@@ -1,6 +1,6 @@
 import { useState } from "react";
  
-function Select() {
+function Count() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -57,4 +57,4 @@ function Select() {
     </form>
   );
 }
-export default Select;
+export default Count;
