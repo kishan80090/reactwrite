@@ -1,0 +1,106 @@
+.col{
+    
+    background-color: red;
+    width: 1300px;
+    height: 40px;
+    color:chartreuse;
+}
+
+.col1{
+    width: 500px;
+    height: 30px;
+    font-size: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+   border-color: red;
+   background-color: yellow ;
+text-align: center;
+}
+.col1:hover{
+    background-color: aqua;
+    border-color: blue;
+    box-shadow: 0px 0px 25px red;
+}
+
+.col2{
+    width: 150px;
+    height: 30px;
+    margin-left: 300px;
+    font-size: 18px;
+    background-color: red;
+    color: white;
+    box-shadow: 0px 0px 25px blue;
+}
+
+.col3{
+    background-color: skyblue;
+    height: 600px;
+}
+
+.col5{
+    color: red;
+    background-color:lightgreen;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+.col6{
+    display: block;
+    color: rgb(74, 22, 218);
+}
+.col7{
+    color: green;
+}
+.col8{
+    color: blue;
+}
+.col9{
+    color: crimson;
+}
+.col10{
+    color: red;
+}
+.col11{
+    position: absolute;
+    background-color: rgba(189, 76, 76, 0.1);
+    width: 400px;
+    height: 300px;
+    margin-left: 480.5px;
+    margin-top: -15px;
+    box-shadow: 0px 0px 25px red;
+    border-radius:50px ;
+}
+.small{
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+}
+.design{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin-top: -35px;
+    
+}
+.design1{
+    width: 100px;
+    height: 30px;
+    background-color: aqua;
+
+}
+.design2{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(233, 143, 143);
+}
+.design3{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(94, 173, 197);
+}
+
+.design4{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(233, 41, 137);
+
+}

@@ -1,11 +1,11 @@
 
-import Count from './component/Count';
+import Weather from './component/Weather';
 import './App.css';
 function App() {
   return (
     <div className="App">
 
-     <Count></Count>
+     <Weather></Weather>
 
     </div>
   );
