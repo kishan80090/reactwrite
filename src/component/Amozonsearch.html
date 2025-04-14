@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Amazon Header</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    
+    .header {
+      background-color: #131921;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f08804;
+      margin-right: 30px;
+      text-decoration: none;
+    }
+
+    /* Search bar */
+    .search-bar {
+      flex: 1;
+      display: flex;
+      margin-right: 20px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    .search-bar button {
+      padding: 8px 12px;
+      background-color: #f08804;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Header links */
+    .header-links a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* Menu bar */
+    .menu-bar {
+      background-color: #232f3e;
+      padding: 10px 20px;
+      display: flex;
+    }
+
+    .menu-bar a {
+      color: white;
+      margin-right: 20px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .menu-bar a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <a href="#" class="logo">amazon.in</a>
+    <div class="search-bar">
+      <input type="text" placeholder="Search Amazon">
+      <button>Search</button>
+    </div>
+    <div class="header-links">
+      <a href="#">Sign In</a>
+      <a href="#">Orders</a>
+      <a href="#">Cart</a>
+    </div>
+  </div>
+
+  <!-- Menu Bar -->
+  <div class="menu-bar">
+    <a href="#">All</a>
+    <a href="#">Today's Deals</a>
+    <a href="#">Customer Service</a>
+    <a href="#">Gift Cards</a>
+    <a href="#">Sell</a>
+    <a href="#">Prime</a>
+  </div>
+
+</body>
+</html>
