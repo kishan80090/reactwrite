@@ -1,11 +1,13 @@
 
-import Weather from './component/Weather';
+// import Weather from './component/Weather';
+import Apicall from './component/Apicall';
 import './App.css';
 function App() {
   return (
     <div className="App">
 
-     <Weather></Weather>
+     {/* <Weather></Weather> */}
+     <Apicall></Apicall>
 
     </div>
   );
