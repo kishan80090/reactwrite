@@ -6,7 +6,7 @@ function Apicall() {
         const Show = () => {        
             const baseURL=`https://kishan80090.github.io/html/Call.json`;
                 axios.get(baseURL).then((response) => {                    
-                        setImage(response.data["image"]);
+                        setImage(response.data);
                     })
                     .catch(error => {
                         console.error("Error fetching weather:", error);
@@ -16,7 +16,7 @@ function Apicall() {
     return (
         <div style={{ padding: '20px' }}>
             <h2>Image Data</h2>
-            <image src={image}></image>
+            {/* <image src={image}></image> */}
             <button onClick={Show}>Click Here</button>
             {image && (
                 <pre>
