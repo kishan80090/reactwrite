@@ -5,10 +5,8 @@ import React,{useState} from "react";
     const [number1,setNumber1]=useState('');
     const [result,setResult]=useState('');
     const [add,setAdd]=useState('');
-
         const handleAdd =(e)=>{
         e.preventDefault();
-
         const num1=Number(number);
         const num2=Number(number1);
 
@@ -27,6 +25,7 @@ import React,{useState} from "react";
         <div>
     <form onSubmit={handleAdd}>
 <input type="number"value={number}onChange={(e)=>setNumber(e.target.value)}></input>
+onchange{(e)=>SVGAnimateTransformElement(e.target.value)}
 <br></br>
 
 <input type="number"value={number1}onChange={(e)=>setNumber1(e.target.value)}></input>
