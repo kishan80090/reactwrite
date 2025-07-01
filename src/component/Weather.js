@@ -164,5 +164,4 @@ function Weather() {
         </div>
     );
 }
-
 export default Weather;
