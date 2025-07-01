@@ -19,12 +19,11 @@
     border: 2px solid red;
     background-color: yellow;
     text-align: center;
+    border-radius: 10px;
     margin: 20px auto;
     display: block;
 }
 .col1:hover {
-    background-color: aqua;
-    border-color: blue;
     box-shadow: 0px 0px 15px red;
 }
 
@@ -36,7 +35,7 @@
 
 .col5 {
     color: red;
-    background-color: lightgreen;
+    background-color: skyblue;
     margin: 20px auto;
     width: fit-content;
     padding: 10px 20px;
@@ -44,20 +43,18 @@
     font-size: 24px;
 }
 
-/* Weather Info */
 .col6, .col7, .col8, .col9, .col10 {
     font-weight: bold;
     font-size: 18px;
     margin: 10px;
     text-align: center;
 }
-.col6 { color:white; }
-.col7 { color:white; }
-.col8 { color:white; }
-.col9 { color:white; }
-.col10 { color:white; }
+.col6 { color:black; }
+.col7 { color:black; }
+.col8 { color:black; }
+.col9 { color:black; }
+.col10 { color:black; }
 
-/* Weather Icon */
 .design {
     width: 50px;
     height: 50px;
@@ -65,7 +62,6 @@
     margin-right: -20px;
 }
 
-/* Button Container */
 .button-container {
     display: flex;
     flex-wrap: wrap;
@@ -74,7 +70,6 @@
     margin-top: 20px;
 }
 
-/* Common Button Styling */
 .btn {
     width: 150px;
     height: 40px;
@@ -92,13 +87,11 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Output & Retrieved Data */
 #output, #currentweather {
     margin-top: 20px;
     font-size: 16px;
     text-align: center;
 }
-
 
 @media (max-width: 500px) {
     .col1 {
@@ -130,7 +123,7 @@
   bottom: 100%;
   width: 2px;
   height: 15px;
-  background: rgba(0, 174, 255, 0.8); /* Sky blue */
+  background: rgba(0, 174, 255, 0.8);
   animation: fall linear infinite;
   opacity: 0.7;
   border-radius: 1px;
@@ -166,4 +159,13 @@
 
 .delete-btn:hover {
     background-color: darkred;
+}
+.weathercolor{
+    background-color: skyblue;
+    width: 500px;
+    border-radius: 20px;
+}
+.img {
+    height: 50px;
+    width: 50px;
 }

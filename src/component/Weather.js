@@ -84,7 +84,7 @@ function Weather() {
     }
 
     const isRaining = weather?.weather[0]?.main?.toLowerCase().includes("rain") ||
-                      weather?.weather[0]?.main?.toLowerCase().includes("drizzle");
+        weather?.weather[0]?.main?.toLowerCase().includes("drizzle");
 
     return (
         <div className='col3'>
@@ -103,15 +103,11 @@ function Weather() {
                     ))}
                 </div>
             )}
+            
             <center>
                 <h1 className="col">CHECK WEATHER</h1>
-                <input
-                    className="col1"
-                    type="text"
-                    value={inputCity}
-                    onChange={handleInputChange}
-                    placeholder="Enter city name"
-                />
+
+                <input className="col1" type="text" value={inputCity} onChange={handleInputChange} placeholder="Enter city name" />
 
                 <div className="button-container">
                     <button className="btn" onClick={handleSearch}>Get Weather</button>
@@ -121,11 +117,11 @@ function Weather() {
                 </div>
 
                 {weather && (
-                    <div>
-                        <h2 className="col5"><b>{weather.name}</b></h2>
+                    <div className="weathercolor" >
+                        <h2 className="col5"><b>☆~~~{weather.name}~~~☆</b></h2>
                         <p className="col6">
                             <b>☆ Temperature : {weather.main.temp}°C
-                                <img className="design" src={`https://openweathermap.org/img/w/${weather.weather[0].icon}.png`} alt="icon" />
+                                <img className="design" src={`https://openweathermap.org/img/w/${weather.weather[0].icon}.png`} alt="" />
                             </b>
                         </p>
                         <p className="col7"><b>☆ Weather : {weather.weather[0].main}</b></p>
