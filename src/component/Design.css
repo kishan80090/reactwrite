@@ -1,106 +1,169 @@
-.col{
-    
+/* Heading Bar */
+.col {
     background-color: red;
-    width: 1300px;
+    width: 100%;
+    max-width: 1300px;
     height: 40px;
-    color:chartreuse;
+    color: chartreuse;
+    text-align: center;
+    line-height: 40px;
+    margin: auto;
 }
 
-.col1{
-    width: 500px;
-    height: 30px;
-    font-size: 20px;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-   border-color: red;
-   background-color: yellow ;
-text-align: center;
+/* Input */
+.col1 {
+    width: 90%;
+    max-width: 500px;
+    height: 40px;
+    font-size: 25px;
+    border: 2px solid red;
+    background-color: yellow;
+    text-align: center;
+    margin: 20px auto;
+    display: block;
 }
-.col1:hover{
+.col1:hover {
     background-color: aqua;
     border-color: blue;
-    box-shadow: 0px 0px 25px red;
+    box-shadow: 0px 0px 15px red;
 }
 
-.col2{
-    width: 150px;
-    height: 30px;
-    margin-left: 300px;
+.col3 {
+    background-color: rgb(42, 109, 138);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.col5 {
+    color: red;
+    background-color: lightgreen;
+    margin: 20px auto;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+/* Weather Info */
+.col6, .col7, .col8, .col9, .col10 {
+    font-weight: bold;
     font-size: 18px;
-    background-color: red;
-    color: white;
-    box-shadow: 0px 0px 25px blue;
+    margin: 10px;
+    text-align: center;
 }
+.col6 { color: rgb(74, 22, 218); }
+.col7 { color: green; }
+.col8 { color: blue; }
+.col9 { color: crimson; }
+.col10 { color: red; }
 
-.col3{
-    background-color: skyblue;
-    height: 600px;
-}
-
-.col5{
-    color: red;
-    background-color:lightgreen;
-    margin-left: 500px;
-    margin-right: 500px;
-}
-.col6{
-    display: block;
-    color: rgb(74, 22, 218);
-}
-.col7{
-    color: green;
-}
-.col8{
-    color: blue;
-}
-.col9{
-    color: crimson;
-}
-.col10{
-    color: red;
-}
-.col11{
-    position: absolute;
-    background-color: rgba(189, 76, 76, 0.1);
-    width: 400px;
-    height: 300px;
-    margin-left: 480.5px;
-    margin-top: -15px;
-    box-shadow: 0px 0px 25px red;
-    border-radius:50px ;
-}
-.small{
+/* Weather Icon */
+.design {
     width: 50px;
     height: 50px;
+    vertical-align: middle;
+    margin-right: -20px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
     margin-top: 20px;
 }
-.design{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    margin-top: -35px;
-    
-}
-.design1{
-    width: 100px;
-    height: 30px;
-    background-color: aqua;
 
+/* Common Button Styling */
+.btn {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(to bottom, #ff4d4d, #b30000);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 6px #800000;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-.design2{
-    width: 100px;
-    height: 30px;
-    background-color: rgb(233, 143, 143);
-}
-.design3{
-    width: 100px;
-    height: 30px;
-    background-color: rgb(94, 173, 197);
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-.design4{
-    width: 100px;
-    height: 30px;
-    background-color: rgb(233, 41, 137);
+/* Output & Retrieved Data */
+#output, #currentweather {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+}
 
+
+@media (max-width: 500px) {
+    .col1 {
+        font-size: 16px;
+        height: 35px;
+    }
+    .btn {
+        width: 120px;
+        font-size: 14px;
+        height: 35px;
+    }
+    .design {
+        width: 40px;
+        height: 40px;
+    }
+}
+.rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.drop {
+  position: absolute;
+  bottom: 100%;
+  width: 2px;
+  height: 15px;
+  background: rgba(0, 174, 255, 0.8); /* Sky blue */
+  animation: fall linear infinite;
+  opacity: 0.7;
+  border-radius: 1px;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(120vh);
+  }
+}
+.btn:disabled {
+    background-color: #ccc;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+.storage-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #f1f9ff;
+}
+
+.delete-btn {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
 }

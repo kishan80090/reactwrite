@@ -24,8 +24,9 @@ import React,{useState} from "react";
     return(
         <div>
     <form onSubmit={handleAdd}>
+        
 <input type="number"value={number}onChange={(e)=>setNumber(e.target.value)}></input>
-onchange{(e)=>SVGAnimateTransformElement(e.target.value)}
+
 <br></br>
 
 <input type="number"value={number1}onChange={(e)=>setNumber1(e.target.value)}></input>
