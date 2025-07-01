@@ -103,7 +103,6 @@ function Weather() {
                     ))}
                 </div>
             )}
-
             <center>
                 <h1 className="col">CHECK WEATHER</h1>
                 <input
