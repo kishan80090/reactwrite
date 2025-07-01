@@ -162,10 +162,7 @@
 }
 .weathercolor{
     background-color: skyblue;
-    width: 500px;
+    width: 450px;
     border-radius: 20px;
 }
-.img {
-    height: 50px;
-    width: 50px;
-}
+
