@@ -117,7 +117,7 @@ function Weather() {
                 </div>
 
                 {weather && (
-                    <div className="weathercolor" >
+                    <div>
                         <h2 className="col5"><b>☆~~~{weather.name}~~~☆</b></h2>
                         <p className="col6">
                             <b>☆ Temperature : {weather.main.temp}°C

@@ -35,7 +35,6 @@
 
 .col5 {
     color: red;
-    background-color: skyblue;
     margin: 20px auto;
     width: fit-content;
     padding: 10px 20px;
@@ -49,11 +48,11 @@
     margin: 10px;
     text-align: center;
 }
-.col6 { color:black; }
-.col7 { color:black; }
-.col8 { color:black; }
-.col9 { color:black; }
-.col10 { color:black; }
+.col6 { color:white; }
+.col7 { color:white; }
+.col8 { color:white; }
+.col9 { color:white; }
+.col10 { color:white; }
 
 .design {
     width: 50px;
@@ -160,9 +159,5 @@
 .delete-btn:hover {
     background-color: darkred;
 }
-.weathercolor{
-    background-color: skyblue;
-    width: 450px;
-    border-radius: 20px;
-}
+
 
