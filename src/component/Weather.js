@@ -105,7 +105,7 @@ function Weather() {
             )}
 
             <center>
-                <h1 className="col">🗲 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 CHECK WEATHER 🗲</h1>
+                <h1 className="col">CHECK WEATHER</h1>
                 <input
                     className="col1"
                     type="text"
