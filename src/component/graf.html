@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Chart with Green/Red Segments</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: rgba(78, 160, 135, 0.637);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    input,
+    button {
+      padding: 8px;
+      font-size: 16px;
+      margin-top: 10px;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    button {
+      display: inline-block;
+      border-radius: 5px;
+      border: none;
+      background-color: aqua;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    canvas {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <p>Enter stock prices (comma-separated):</p>
+    <input type="text" id="priceInput" placeholder="e.g. 1490,1489,1495,1492">
+    <br>
+    <button onclick="drawChart()">Draw Chart</button>
+    <canvas id="stockChart"></canvas>
+  </div>
+
+  <script>
+    let chart;
+
+    function drawChart() {
+      const input = document.getElementById('priceInput').value;
+      const prices = input.split(',').map(Number).filter(n => !isNaN(n));
+
+      if (prices.length < 2) {
+        alert('Please enter at least two numbers!');
+        return;
+      }
+
+      const labels = prices.map((_, i) => `T${i + 1}`);
+      const pt = document.getElementById('stockChart').getContext('2d');
+
+      if (chart) chart.destroy();
+
+      chart = new Chart(pt, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Stock Price',
+            data: prices,
+            fill: false,
+            borderColor: 'grey',
+            borderWidth: 2,
+            segment: {
+              borderColor: ctx => {
+                const i = ctx.p0DataIndex;
+                if (i === 0) return 'grey';
+                return ctx.p1.parsed.y > ctx.p0.parsed.y ? 'green' : 'red';
+              }
+            },
+            pointBackgroundColor: 'black',
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: true },
+            title: {
+              display: true,
+              text: 'User-Input Intraday Stock Movement'
+            }
+          },
+          scales: {
+            y: { beginAtZero: false }
+          }
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

@@ -139,7 +139,6 @@ function Weather() {
                         <p><b>Humidity: {retrievedData.main.humidity}%</b></p>
                     </div>
                 )}
-
                 {storageList.length > 0 && (
                     <div id="output">
                         <h3>Local Storage Items:</h3>
